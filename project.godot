@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="DataAim"
+config/description="DataAim is an open-source project designed to collect detailed gameplay to train AI models for detecting and combating cheating in games."
+config/version="0.0.1"
+run/main_scene="res://scenes/levels/level_aim_redline.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="DataAim"
+
+[editor]
+
+naming/scene_name_casing=1
+naming/script_name_casing=1
