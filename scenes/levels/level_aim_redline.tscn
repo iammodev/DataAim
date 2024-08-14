@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdooq7yr0px10"]
+
+[ext_resource type="Material" uid="uid://c121yd8lhq5fr" path="res://assets/textures/prototype_green.tres" id="1_b8pdp"]
+[ext_resource type="PackedScene" uid="uid://chx2lf61ulh5s" path="res://scenes/models/box/box_small.tscn" id="1_u2m4b"]
+[ext_resource type="PackedScene" uid="uid://d4jt33froakw7" path="res://scenes/models/box/box_medium.tscn" id="3_2e4qr"]
+[ext_resource type="PackedScene" uid="uid://dm78c6i6qsxwc" path="res://scenes/models/box/box_big.tscn" id="4_4f0xi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3meb0"]
+size = Vector3(15, 0.2, 30)
+
+[node name="level_aim_redline" type="Node3D"]
+
+[node name="floor_left" type="Node3D" parent="."]
+
+[node name="floor" type="MeshInstance3D" parent="floor_left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("BoxMesh_3meb0")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_b8pdp")
+
+[node name="box_big" parent="floor_left" instance=ExtResource("4_4f0xi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 1.25, -13.25)
+
+[node name="box_medium" parent="floor_left" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0.75, -12.75)
+
+[node name="box_small" parent="floor_left" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, -11.5)
+
+[node name="box_medium2" parent="floor_left" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0.75, -2.25)
+
+[node name="box_small2" parent="floor_left" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, -3.5)
+
+[node name="box_medium3" parent="floor_left" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0.75, 2.25)
+
+[node name="box_small3" parent="floor_left" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, 3.5)
+
+[node name="box_medium4" parent="floor_left" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0.75, 12.75)
+
+[node name="box_small4" parent="floor_left" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, 11.5)
+
+[node name="floor_right" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+
+[node name="floor" type="MeshInstance3D" parent="floor_right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("BoxMesh_3meb0")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_b8pdp")
+
+[node name="box_big" parent="floor_right" instance=ExtResource("4_4f0xi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25, 1.25, -13.25)
+
+[node name="box_medium" parent="floor_right" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.75, -12.75)
+
+[node name="box_small" parent="floor_right" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -11.5)
+
+[node name="box_medium2" parent="floor_right" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.75, -2.25)
+
+[node name="box_small2" parent="floor_right" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -3.5)
+
+[node name="box_medium3" parent="floor_right" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.75, 2.25)
+
+[node name="box_small3" parent="floor_right" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 3.5)
+
+[node name="box_medium4" parent="floor_right" instance=ExtResource("3_2e4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.75, 12.75)
+
+[node name="box_small4" parent="floor_right" instance=ExtResource("1_u2m4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 11.5)
