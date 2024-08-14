@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm78c6i6qsxwc"]
+
+[ext_resource type="Material" uid="uid://doc10jtuumaty" path="res://assets/textures/prototype_orange.tres" id="1_157cj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_godnm"]
+size = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n23ej"]
+size = Vector3(2.5, 2.5, 2.5)
+
+[node name="box_big" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+mesh = SubResource("BoxMesh_godnm")
+surface_material_override/0 = ExtResource("1_157cj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_n23ej")
